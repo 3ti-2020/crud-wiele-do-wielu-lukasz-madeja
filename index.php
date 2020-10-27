@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Łukasz Madeja</title>
 </head>
 <body>
     <div class="grid">
         <div class="item a">
-            <?php
+        <h1>Łukasz Madeja</h1>
+        </div>
+        <div class="item b"><?php
                     $servername = "localhost";
                     $username = "root";
                     $password = "";
@@ -44,85 +46,8 @@
                     echo("</table>");
                 ?>
         </div>
-        <div class="item b">
-            <h3>Autor</h3>
-                                <form action="insert1.php" method="post" class="insert">
-                                    <input type="text" name="autor" placeholder="Autor">
-                                    <input type="submit" value="Zapisz">
-                                </form>
-                                <h3>Tytuł</h3>
-                                <form action="insert2.php" method="post" class="insert">
-                                    <input type="text" name="tytul" placeholder="Tytuł">
-                                    <input type="submit" value="Zapisz">
-
-                        <h3>Autor + Ksiazka</h3>
-                        <?php
-                        $servername = "localhost";
-                        $username = "root";
-                        $password = "";
-                        $dbname = "library";
-
-                        $conn = new mysqli($servername, $username, $password, $dbname);
-
-                        $result2 = $conn->query("SELECT * FROM library_autor");
-
-                        echo("<form action='insert3.php' method='POST'  class='insert'>");
-                        echo("<select name='autorselect'>");
-                        while($row=$result2->fetch_assoc() ){
-                            echo("<option value='".$row['id_autor']."'>".$row['autor']."</option>");
-                        }
-                        echo("</select>");
-
-                        $result3 = $conn->query("SELECT * FROM library_tytul");
-
-                        echo("<select name='tytulselect'>");
-                        while($row=$result3->fetch_assoc() ){
-                            echo("<option value='".$row['id_tytul']."'>".$row['tytul']."</option>");
-                        }
-                        echo("</select>");
-
-                        echo("<input type='submit' value='Zapisz'>");
-                        echo("</form>");
-                    ?>
-        </div>
-        <div class="item c">
-            <?php
-
-                        $servername = "localhost";
-                        $username = "root";
-                        $password = "";
-                        $dbname = "library";
-
-                        $conn = new mysqli($servername, $username, $password, $dbname);
-
-                        $result4 = $conn->query("SELECT * FROM library_autor");
-
-                        echo("<h3>Usuń autora:</h3>");
-                        echo("<form action='delete1.php' method='POST'  class='delete'>");
-                        echo("<select name='id_autor'>");
-                        while($row=$result4->fetch_assoc() ){
-                            echo("<option value='".$row['id_autor']."'>".$row['autor']."</option>");
-                        }
-                        echo("</select>");
-
-                        echo("<input type='submit' value='Zapisz'>");
-                        echo("</form>");
-
-                        $result5 = $conn->query("SELECT * FROM library_tytul");
-
-                        echo("<h3>Usuń tytuł:</h3>");
-                        echo("<form action='delete2.php' method='POST'  class='delete'>");
-                        echo("<select name='id_tytul'>");
-                        while($row=$result5->fetch_assoc() ){
-                            echo("<option value='".$row['id_tytul']."'>".$row['tytul']."</option>");
-                        }
-                        echo("</select>");
-
-                        echo("<input type='submit' value='Zapisz'>");
-                        echo("</form>");
-
-                        ?>
-        </div>
+        <div class="item c"></div>
+        <div class="item d"></div>
     </div>
 </body>
 </html>
