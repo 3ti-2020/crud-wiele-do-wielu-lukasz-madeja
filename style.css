@@ -39,8 +39,8 @@
     flex-direction: column; 
 }
 
-.grid{
-    grid-area: c;
+.d{
+    grid-area: d;
     background: rgb(83, 82, 82);
     display: flex;
     justify-content: center;
