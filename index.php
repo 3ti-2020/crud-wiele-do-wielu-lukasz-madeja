@@ -12,10 +12,10 @@
         <h1>Łukasz Madeja</h1>
         </div>
         <div class="item b"><?php
-                    $servername = "localhost";
-                    $username = "root";
-                    $password = "";
-                    $dbname = "library";
+                     $servername = "localhost";
+                     $username = "sql2374210";
+                     $password = "cJ6%uL8!";
+                     $dbname = "sql2374210";
 
                     $conn = new mysqli($servername, $username, $password, $dbname);
 
