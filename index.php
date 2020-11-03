@@ -12,7 +12,7 @@
         <h1>Łukasz Madeja</h1>
         </div>
         <div class="item b"><?php
-                     $servername = "localhost";
+                     $servername = "sql2.freemysqlhosting.net";
                      $username = "sql2374210";
                      $password = "cJ6%uL8!";
                      $dbname = "sql2374210";
