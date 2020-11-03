@@ -47,15 +47,10 @@
                 ?>
         </div>
         <div class="item c">
-        <a href="cards.html" class="menu">Cards</a>
-        <a href="cards.html" class="menu">Cards</a>
+        <a href="logowanie.php" class="menu">Zaloguj</a> 
         <a href="cards.html" class="menu">Cards</a>
         </div>
         <div class="item d">
-
-
-
-        
         </div>
     </div>
 </body>
