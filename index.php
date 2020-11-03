@@ -11,46 +11,65 @@
         <div class="item a">
         <h1>Łukasz Madeja</h1>
         </div>
-        <div class="item b"><?php
-                     $servername = "sql2.freemysqlhosting.net";
-                     $username = "sql2374210";
-                     $password = "cJ6%uL8!";
-                     $dbname = "sql2374210";
+        <div class="item b">
+        <?php
 
-                    $conn = new mysqli($servername, $username, $password, $dbname);
+            $servername = "sql2.freemysqlhosting.net";
+            $username = "sql2374210";
+            $password = "cJ6%uL8!";
+            $dbname = "sql2374210";
 
 
-                    $result1 = $conn->query("SELECT id_book, autor, tytul FROM library_book, library_autor, library_tytul WHERE library_book.id_autor=library_autor.id_autor AND library_book.id_tytul=library_tytul.id_tytul");
+            $conn = new mysqli($servername, $username, $password, $dbname);
 
-                    echo("<table class='tabelka2' border=1");
-                    echo("<tr>
-                    <th>ID Książki</th>
-                    <th>Autor</th>
-                    <th>Tytuł</th>
-                    <th>Usuwanie</th>
-                    </tr>");
+            $result = $conn->query("SELECT id_autor_tytul, name, tytul FROM lib_autor, lib_tyt, lib_aut_tyt where lib_aut_tyt.id_autor=lib_autor.id_autor and lib_aut_tyt.id_tytul = lib_tyt.id_tytul  ");
 
-                    while($row=$result1->fetch_assoc() ){
-                        echo("<tr>");
-                        echo("<td>".$row['id_book']."</td>");
-                        echo("<td>".$row['autor']."</td>");
-                        echo("<td>".$row['tytul']."</td>");
-                        echo("<td>
-                                <form action='delete3.php' method='post'>
-                                    <input type='hidden' name='id' value='".$row['id_book']."'>
-                                    <input type='submit' value='x'>
-                                </form>
-                            </td>");
-                        echo("</tr>");
-                    }
-                    echo("</table>");
-                ?>
+
+
+            echo("<table class='table'>");
+            echo("<tr class='tr'>
+            <th class='th'>ID</th>
+            <th class='th'>Nazwisko</th>
+            <th class='th'>Tytul</th>
+            <th class='th'>Usuń</th>
+            </tr>");
+
+
+
+
+            while($row=$result->fetch_assoc()){
+                
+                echo("<tr class='tr'>");
+                echo("<td class='td'>".$row['id_autor_tytul']."</td>");
+                echo("<td class='td'>".$row['name']."</td>");
+                echo("<td class='td'>".$row['tytul']."</td>");
+                echo("<td class='td'>  <form class='form' action='delete.php' method='POST'>
+                <input class='text' type='hidden' name='ID' value='$row[id_autor_tytul]' placeholder='ID'></br>
+                <input class='buttona' type='submit' value='Usun'> </td>");
+                
+                echo("</tr>");
+            }
+                
+
+
+            echo("</table>");
+
+
+
+
+
+?>
         </div>
         <div class="item c">
-        <a href="logowanie.php" class="menu">Zaloguj</a> 
+        <a class="menu" href="logowanie.php">Zaloguj</a> 
         <a href="cards.html" class="menu">Cards</a>
         </div>
         <div class="item d">
+        <form class="form" action="insert.php" method="POST">
+            <input class="text" type="text" name="nazwisko" placeholder="Nazwisko"></br>
+            <input class="text" type="text" name="tytul" placeholder="Tytul"></br>
+            <input class="button" type="submit" value="Dodaj">
+        </form>
         </div>
     </div>
 </body>
