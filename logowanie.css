@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.grid{
+    display: grid;
+    height: 100vh;
+    grid-template-columns:50% 50%;
+    grid-template-rows: 20% 70% 10%;
+    grid-template-areas: 
+    "a a"
+    "b b"
+    "c c";
+}
+
+.a{
+    grid-area: a;
+    background: dimgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
+
+.b{
+    grid-area: b;
+    background: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.c{
+    grid-area: c;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+
