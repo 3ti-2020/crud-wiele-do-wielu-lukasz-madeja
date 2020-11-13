@@ -14,7 +14,7 @@
         <div class="item a">
             <a class="menu" href="startowa.html">Wyloguj</a>
             <a class="menu" href="cards.html">Karty</a>
-            <a class="menu" href="https://github.com/maddking1337/bibliotekalistopad2020">Github</a>
+            <a class="menu" href="https://github.com/3ti-2020/crud-wiele-do-wielu-lukasz-madeja">Github</a>
         </div>
         <div class="item b">
             <a class="menu" href="#">Dodawanie książek</a>
