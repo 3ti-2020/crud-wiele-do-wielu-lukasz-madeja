@@ -1,1 +1,1 @@
-https://crudwieledowielu.herokuapp.com/index.php
+https://crudwieledowielu.herokuapp.com/startowa.html
