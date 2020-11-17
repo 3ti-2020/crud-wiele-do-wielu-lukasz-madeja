@@ -17,8 +17,11 @@
             <a class="menu" href="https://github.com/3ti-2020/crud-wiele-do-wielu-lukasz-madeja">Github</a>
         </div>
         <div class="item b">
-            <a class="menu" href="#">Dodawanie książek</a>
-            <a class="menu" href="#">Dodawanie autora</a>
+        <form action="users.php" method="POST">
+                <input type="text" name="imie" placeholder="imie" >
+                <input type="text" name="nazwisko" placeholder="naziwsko" >
+                <input type="submit" value="Dodaj">
+                </form>
     
         </div>
         <div class="item c">
@@ -58,7 +61,7 @@
                 </form>
         </div>
         <div class="item e">
-            <h6>Wykonał Łukasz Madeja</h6>
+            
         </div>
     </div>
 </body>
