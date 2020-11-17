@@ -63,6 +63,9 @@
 .e{
     grid-area: e;
     background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .menu{
