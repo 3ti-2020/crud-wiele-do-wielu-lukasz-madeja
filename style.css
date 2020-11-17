@@ -88,7 +88,7 @@
 
 .c2{
     grid-area: c;
-    background: blue;
+    background: rgb(68, 66, 66);
     color: white;
     display: flex;
     justify-content: center;
@@ -97,7 +97,7 @@
 
 .c3{
     grid-area: c;
-    background: red;
+    background: rgb(122, 119, 119);
     color: white;
     display: flex;
     justify-content: center;
@@ -106,7 +106,7 @@
 
 .c4{
     grid-area: c;
-    background:green;
+    background:rgb(189, 189, 189);
     color: white;
     display: flex;
     justify-content: center;

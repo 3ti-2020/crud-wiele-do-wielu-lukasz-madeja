@@ -61,9 +61,9 @@
                 </form>
         </div>
         <div class="item e">
-            <div class="btnZmiana">Niebieski</div>
-            <div class="btnZmiana1">Czerwony</div>
-            <div class="btnZmiana2">Zielony</div>
+            <div class="btnZmiana">Kolor 1</div>
+            <div class="btnZmiana1">Kolor 2</div>
+            <div class="btnZmiana2">Kolor 3</div>
         </div>
     </div>
 </body>
